@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",             // Versione di ECMAScript a cui il codice verrà compilato
+    "useDefineForClassFields": true, // Consigliato per classi moderne con campi
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Librerie standard disponibili globalmente
+    "module": "ESNext",             // Sistema di moduli da usare (ES Modules)
+    "skipLibCheck": true,           // Salta il controllo dei tipi per i file delle librerie (può velocizzare la compilazione)
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",  // Strategia di risoluzione dei moduli, "bundler" è comune con Vite/Webpack
+    "allowImportingTsExtensions": true, // Permette importazioni con estensioni .ts (es. .ts, .tsx)
+    "resolveJsonModule": true,      // Permette l'importazione di file JSON
+    "isolatedModules": true,        // Assicura che ogni file possa essere compilato indipendentemente
+    "noEmit": true,                 // Non emettere file JavaScript (il bundler si occupa di questo)
+    "jsx": "react-jsx",             // Configura JSX per React
+
+    /* Linting */
+    "strict": true,                 // Abilita tutti i rigorosi controlli di tipo
+    "noUnusedLocals": true,         // Segnala variabili locali non usate
+    "noUnusedParameters": true,     // Segnala parametri di funzione non usati
+    "noFallthroughCasesInSwitch": true, // Segnala switch senza case con fallthrough
+
+    // ** Importante per il tuo caso: abilitare l'importazione di file JavaScript/JSX **
+    "allowJs": true,                // Consente l'inclusione e l'importazione di file JavaScript
+    "esModuleInterop": true        // Abilita l'interoperabilità tra moduli CommonJS ed ES
+  },
+  "include": ["src"],               // Specifica quali file e directory includere nel progetto
+  "exclude": ["node_modules"]       // Specifica quali file e directory escludere
+}
